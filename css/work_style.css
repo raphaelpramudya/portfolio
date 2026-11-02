@@ -1,0 +1,144 @@
+
+
+:root {
+  --black: #000;
+  --white: #fff;
+  --grey-bg: #e6e6e6;
+  --grey-pill: #e4e4e4;
+  --ink: #000;
+  --font: "Roboto", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  color: var(--ink);
+  background: var(--grey-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, p, ul, figure {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+/* =========================================
+   WORK
+   ========================================= */
+.work {
+  padding: clamp(96px, 8.7vw, 140px) 4.2vw clamp(48px, 5vw, 80px);
+}
+
+/* ---------- Judul ---------- */
+.work__head {
+  text-align: center;
+}
+
+.work__title {
+  font-size: clamp(56px, 7.5vw, 120px);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.2em;
+  /* kompensasi letter-spacing terakhir supaya benar-benar di tengah */
+  padding-left: 0.2em;
+}
+
+.work__intro {
+  max-width: 66%;
+  margin: clamp(14px, 1.7vw, 26px) auto 0;
+  font-size: clamp(13px, 1.4vw, 22px);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0.1em;
+}
+
+/* ---------- Grid proyek ---------- */
+.work__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(32px, 4.9vw, 78px) 4.7vw;
+  margin-top: clamp(32px, 4.2vw, 68px);
+}
+
+.work-card {
+  display: block;
+  aspect-ratio: 626 / 326;
+  overflow: hidden;
+  border-radius: clamp(14px, 1.4vw, 22px);
+  background: #d9d9d9;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* hitam putih, berwarna saat di-hover */
+  filter: grayscale(1);
+  transition: filter 0.5s ease, transform 0.5s ease;
+}
+
+.work-card:hover,
+.work-card:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+}
+
+.work-card:hover img,
+.work-card:focus-visible img {
+  filter: grayscale(0);
+  transform: scale(1.03);
+}
+
+/* =========================================
+   RESPONSIVE (tablet & mobile)
+   ========================================= */
+@media (max-width: 900px) {
+  .work {
+    padding: 100px 24px 48px;
+  }
+
+  .work__intro {
+    max-width: 100%;
+    letter-spacing: 0.05em;
+  }
+}
+
+@media (max-width: 700px) {
+  .work__grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    transition: none !important;
+  }
+}

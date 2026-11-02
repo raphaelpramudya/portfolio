@@ -1,0 +1,184 @@
+/* =========================================
+   Portfolio Raphael - Resume
+   Desain dasar: 1440px. Ukuran memakai vw/clamp
+   agar skalanya mengikuti lebar layar.
+   Gaya navbar ada di nav.css (jangan ditulis ulang di sini).
+   ========================================= */
+
+:root {
+  --black: #000;
+  --white: #fff;
+  --grey-bg: #e6e6e6;
+  --grey-line: #bdbdbd;
+  --ink: #000;
+  --font: "Roboto", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  color: var(--ink);
+  background: var(--grey-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, p, ul, figure {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+/* =========================================
+   RESUME
+   ========================================= */
+.resume {
+  padding: clamp(96px, 8.7vw, 140px) 4.2vw clamp(56px, 6vw, 96px);
+}
+
+/* ---------- Judul ---------- */
+.resume__head {
+  text-align: center;
+}
+
+.resume__title {
+  font-size: clamp(56px, 7.5vw, 120px);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.2em;
+  /* kompensasi letter-spacing terakhir supaya benar-benar di tengah */
+  padding-left: 0.2em;
+}
+
+.resume__intro {
+  max-width: 56%;
+  margin: clamp(14px, 1.7vw, 26px) auto 0;
+  font-size: clamp(13px, 1.4vw, 22px);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0.1em;
+}
+
+/* ---------- Tombol ---------- */
+.resume__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: clamp(24px, 2.8vw, 44px);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 28px;
+  font-family: inherit;
+  font-size: clamp(12px, 1vw, 15px);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  border-radius: 999px;
+  transition: opacity 0.2s ease, background-color 0.2s ease;
+}
+
+.btn svg {
+  flex: none;
+  width: 18px;
+  height: 18px;
+}
+
+.btn--dark {
+  color: var(--white);
+  background: var(--black);
+}
+
+.btn--dark:hover {
+  opacity: 0.75;
+}
+
+.btn--light {
+  color: var(--black);
+  background: var(--white);
+}
+
+.btn--light:hover {
+  background: #f0f0f0;
+}
+
+/* ---------- Preview ---------- */
+.resume__preview {
+  width: min(100%, 920px);
+  margin: clamp(28px, 3.4vw, 54px) auto 0;
+  overflow: hidden;
+  border-radius: clamp(14px, 1.4vw, 22px);
+  background: var(--white);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.resume__frame {
+  display: block;
+  width: 100%;
+  height: clamp(560px, 82vh, 1200px);
+  border: 0;
+}
+
+.resume__fallback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  min-height: 280px;
+  padding: 32px 24px;
+  text-align: center;
+  font-size: clamp(14px, 1.3vw, 20px);
+  font-weight: 300;
+  letter-spacing: 0.03em;
+}
+
+/* =========================================
+   RESPONSIVE (tablet & mobile)
+   ========================================= */
+@media (max-width: 900px) {
+  .resume {
+    padding: 100px 24px 48px;
+  }
+
+  .resume__intro {
+    max-width: 100%;
+    letter-spacing: 0.05em;
+  }
+
+  .resume__frame {
+    height: 70vh;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    transition: none !important;
+  }
+}

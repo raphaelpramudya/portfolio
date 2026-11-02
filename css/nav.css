@@ -1,0 +1,75 @@
+/* =========================================
+   nav.css - navbar bersama untuk SEMUA halaman
+   (Home, Work, Project, Resume, dst.)
+   Jangan menulis ulang gaya navbar di CSS halaman.
+   ========================================= */
+
+/* ruang scrollbar selalu disisakan, jadi lebar tampilan sama di semua halaman */
+html {
+  scrollbar-gutter: stable;
+}
+
+.nav-wrap {
+  position: fixed;
+  top: 28px;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.nav {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 11px 42px;
+  background: #fff;
+  border-radius: 999px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+  font-family: "Roboto", system-ui, -apple-system, "Segoe UI", sans-serif;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+.nav__link {
+  padding: 8px 13px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #000;
+  text-decoration: none;
+  border-radius: 999px;
+  transition: background-color 0.2s ease;
+}
+
+.nav__link:hover {
+  background: #f0f0f0;
+}
+
+.nav__link.is-active {
+  background: #e4e4e4;
+}
+
+.nav__link + .nav__link {
+  margin-left: 14px;
+}
+
+@media (max-width: 900px) {
+  .nav {
+    padding: 8px 14px;
+    gap: 0;
+  }
+
+  .nav__link + .nav__link {
+    margin-left: 4px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav__link {
+    transition: none;
+  }
+}

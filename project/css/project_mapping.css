@@ -1,0 +1,408 @@
+/* =========================================
+   Portfolio Raphael - Detail Project (template)
+   Dipakai oleh semua halaman di folder project/<nama-proyek>/
+   Gaya navbar ada di nav.css (jangan ditulis ulang di sini).
+   ========================================= */
+
+:root {
+  --black: #000;
+  --white: #fff;
+  --grey-bg: #e6e6e6;
+  --grey-line: #bdbdbd;
+  --ink: #000;
+  --font: "Roboto", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  color: var(--ink);
+  background: var(--grey-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, p, ul, ol, dl, dd, figure {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+/* =========================================
+   DETAIL
+   ========================================= */
+.detail {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: clamp(96px, 8.7vw, 140px) 24px clamp(56px, 6vw, 96px);
+}
+
+/* ---------- Tombol kembali ---------- */
+.back {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: clamp(12px, 1vw, 14px);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  background: var(--white);
+  border-radius: 999px;
+  transition: background-color 0.2s ease;
+}
+
+.back:hover {
+  background: #f0f0f0;
+}
+
+/* ---------- Judul (rata kiri) ---------- */
+.detail__head {
+  margin-top: clamp(24px, 3vw, 44px);
+}
+
+.detail__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: clamp(12px, 1.4vw, 20px);
+}
+
+.detail__tags li {
+  padding: 5px 14px;
+  font-size: clamp(11px, 0.9vw, 14px);
+  font-weight: 400;
+  border: 1px solid var(--black);
+  border-radius: 999px;
+}
+
+.detail__title {
+  font-size: clamp(36px, 6vw, 88px);
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: 0.08em;
+}
+
+.detail__intro {
+  max-width: 44em;
+  margin-top: clamp(14px, 1.7vw, 26px);
+  font-size: clamp(15px, 1.5vw, 22px);
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+/* ---------- Gambar utama ---------- */
+.hero {
+  margin-top: clamp(28px, 3.4vw, 54px);
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: clamp(14px, 1.4vw, 22px);
+  background: #d9d9d9;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---------- Info + isi ---------- */
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2.3fr);
+  gap: clamp(32px, 5vw, 80px);
+  margin-top: clamp(36px, 4.5vw, 72px);
+  align-items: start;
+}
+
+/* kolom info menempel saat halaman di-scroll */
+.info {
+  position: sticky;
+  top: 110px;
+}
+
+.info__list > div {
+  padding: 14px 0;
+  border-top: 1px solid var(--grey-line);
+}
+
+.info__list > div:last-child {
+  border-bottom: 1px solid var(--grey-line);
+}
+
+.info__list dt {
+  margin-bottom: 4px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.info__list dd {
+  font-size: clamp(14px, 1.2vw, 18px);
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.info__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.btn {
+  display: block;
+  padding: 13px 24px;
+  text-align: center;
+  font-size: clamp(12px, 1vw, 15px);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  border-radius: 999px;
+  transition: opacity 0.2s ease, background-color 0.2s ease;
+}
+
+.btn--dark {
+  color: var(--white);
+  background: var(--black);
+}
+
+.btn--dark:hover {
+  opacity: 0.75;
+}
+
+.btn--light {
+  color: var(--black);
+  background: var(--white);
+}
+
+.btn--light:hover {
+  background: #f0f0f0;
+}
+
+/* ---------- Isi penjelasan ---------- */
+.block + .block {
+  margin-top: clamp(28px, 3.4vw, 52px);
+}
+
+.block__heading {
+  margin-bottom: clamp(10px, 1.2vw, 18px);
+  font-size: clamp(22px, 2.4vw, 36px);
+  font-weight: 300;
+  letter-spacing: 0.1em;
+}
+
+.block p {
+  font-size: clamp(15px, 1.3vw, 19px);
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+/* langkah proses bernomor */
+.steps {
+  counter-reset: step;
+}
+
+.steps li {
+  position: relative;
+  padding: 18px 0 18px 64px;
+  border-top: 1px solid var(--grey-line);
+  counter-increment: step;
+}
+
+.steps li:last-child {
+  border-bottom: 1px solid var(--grey-line);
+}
+
+.steps li::before {
+  content: counter(step, decimal-leading-zero);
+  position: absolute;
+  top: 18px;
+  left: 0;
+  font-size: clamp(16px, 1.5vw, 22px);
+  font-weight: 300;
+  letter-spacing: 0.2em;
+}
+
+.steps h3 {
+  margin-bottom: 6px;
+  font-size: clamp(16px, 1.4vw, 20px);
+  font-weight: 500;
+}
+
+.steps p {
+  font-size: clamp(14px, 1.2vw, 17px);
+}
+
+/* video opsional (16:9) */
+.video {
+  margin-top: clamp(28px, 3.4vw, 52px);
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: clamp(14px, 1.4vw, 22px);
+  background: var(--black);
+}
+
+.video iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ---------- Galeri ---------- */
+.gallery {
+  margin-top: clamp(40px, 5vw, 80px);
+}
+
+.gallery__heading {
+  margin-bottom: clamp(16px, 2vw, 28px);
+  font-size: clamp(22px, 2.4vw, 36px);
+  font-weight: 300;
+  letter-spacing: 0.1em;
+}
+
+.gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(16px, 2.4vw, 40px);
+}
+
+.gallery__item {
+  min-width: 0;
+}
+
+.gallery__item img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: clamp(12px, 1.2vw, 18px);
+  background: #d9d9d9;
+}
+
+.gallery__item figcaption {
+  margin-top: 10px;
+  font-size: clamp(12px, 1vw, 14px);
+  font-weight: 300;
+  letter-spacing: 0.05em;
+}
+
+/* ---------- Navigasi bawah ---------- */
+.pager {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: clamp(40px, 5vw, 80px);
+  padding-top: clamp(20px, 2.4vw, 36px);
+  border-top: 1px solid var(--grey-line);
+}
+
+.pager__link {
+  padding: 12px 26px;
+  font-size: clamp(12px, 1vw, 15px);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--black);
+  background: var(--white);
+  border-radius: 999px;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.pager__link:hover {
+  background: #f0f0f0;
+}
+
+.pager__link--center {
+  color: var(--white);
+  background: var(--black);
+}
+
+.pager__link--center:hover {
+  color: var(--white);
+  background: var(--black);
+  opacity: 0.75;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .info {
+    position: static;
+  }
+
+  .info__actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .info__actions .btn {
+    flex: 1 1 160px;
+  }
+
+  .gallery__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .steps li {
+    padding-left: 52px;
+  }
+
+  .pager {
+    justify-content: center;
+  }
+
+  .pager__link--center {
+    order: -1;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    transition: none !important;
+  }
+}

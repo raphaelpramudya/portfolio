@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project | Raphael Portfolio</title>
+  <meta name="description" content="Daftar proyek Raphael: UI/UX, web development, VR &amp; MR, interactive media, film, dan foto.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/project_style.css">
+  <link rel="stylesheet" href="css/nav.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="nav-wrap">
+    <nav class="nav" aria-label="Navigasi utama">
+      <a href="index.html" class="nav__link">Home</a>
+      <a href="project.html" class="nav__link is-active" aria-current="page">Project</a>
+      <a href="work.html" class="nav__link">Work</a>
+      <a href="resume.html" class="nav__link">Resume</a>
+    </nav>
+  </header>
+
+  <main class="project">
+
+    <!-- ===== JUDUL ===== -->
+    <header class="project__head">
+      <h1 class="project__title">Project</h1>
+      <p class="project__intro">
+        UI/UX, web development, Immerive Technology, interactive media, film, and photography,
+        from the first idea to the final result.
+      </p>
+    </header>
+
+    <!-- ===== FILTER ===== -->
+    <div class="filter" role="group" aria-label="Filter kategori proyek">
+      <button class="filter__btn is-active" type="button" data-filter="all">All</button>
+      <button class="filter__btn" type="button" data-filter="uiux">UI/UX</button>
+      <button class="filter__btn" type="button" data-filter="web">Web Development</button>
+      <button class="filter__btn" type="button" data-filter="xr">Immerive Technology</button>
+      <button class="filter__btn" type="button" data-filter="interactive">Interactive Media</button>
+      <button class="filter__btn" type="button" data-filter="filmfoto">Film &amp; Photo</button>
+    </div>
+
+    <!-- ===== DAFTAR PROYEK ===== -->
+    <section class="project__list" aria-label="Daftar proyek">
+
+      <!-- ========== Immersive ========== -->
+      <article class="item" data-category="xr">
+        <a class="item__media" href="project/project_mapping.html" aria-label="Lihat proyek VR">
+          <img src="https://ik.imagekit.io/slq2vcu51/porto/project-mapping.jpg?updatedAt=1793434924871" alt="Tampilan proyek Projection Mapping" width="626" height="326" loading="lazy">
+        </a>
+        <div class="item__body">
+          <span class="item__no">01</span>
+          <h2 class="item__name">Rasuna Said - Projection Mapping of National Hero</h2>
+          <p class="item__desc">
+            Tulis deskripsi singkat proyek Virtual Reality ini: tujuan, perangkat, dan hasilnya.
+          </p>
+          <ul class="item__tags">
+            <li>Projection Mapping</li>
+            <li>Immersive</li>
+          </ul>
+          <a class="item__link" href="project/project_mapping.html">View Project</a>
+        </div>
+      </article>
+
+      <article class="item" data-category="xr">
+        <a class="item__media" href="project/project_mr.html" aria-label="Lihat proyek MR">
+          <img src="https://ik.imagekit.io/slq2vcu51/porto/project-mr.jpg?updatedAt=1793434925940" alt="Tampilan proyek Mixed Reality" width="626" height="326" loading="lazy">
+        </a>
+        <div class="item__body">
+          <span class="item__no">02</span>
+          <h2 class="item__name">PENSTour - Navigation and Virtual Tour of EEPIS</h2>
+          <p class="item__desc">
+            Tulis deskripsi singkat proyek Mixed Reality ini: tujuan, perangkat, dan hasilnya.
+          </p>
+          <ul class="item__tags">
+            <li>MR</li>
+            <li>Immersive</li>
+            <li>UI Design</li>
+          </ul>
+          <a class="item__link" href="project/project_mr.html">View Project</a>
+        </div>
+      </article>
+      
+      <article class="item" data-category="xr">
+        <a class="item__media" href="project/project_vr.html" aria-label="Lihat proyek VR">
+          <img src="https://ik.imagekit.io/slq2vcu51/porto/project-vr.jpg?updatedAt=1793434923536" alt="Tampilan proyek Virtual Reality" width="626" height="326" loading="lazy">
+        </a>
+        <div class="item__body">
+          <span class="item__no">03</span>
+          <h2 class="item__name">SIMPUYER - Simulation of Making Powdered Medicine</h2>
+          <p class="item__desc">
+            Tulis deskripsi singkat proyek Virtual Reality ini: tujuan, perangkat, dan hasilnya.
+          </p>
+          <ul class="item__tags">
+            <li>VR</li>
+            <li>Immersive</li>
+            <li>UI Design</li>
+          </ul>
+          <a class="item__link" href="project/project_vr.html">View Project</a>
+        </div>
+      </article>
+
+      <article class="item" data-category="interactive">
+        <a class="item__media" href="project/project_inter.html" aria-label="Lihat proyek poster interaktif">
+          <img src="https://ik.imagekit.io/slq2vcu51/porto/project-poster.jpg?updatedAt=1793434925490" alt="Tampilan poster interaktif" width="626" height="326" loading="lazy">
+        </a>
+        <div class="item__body">
+          <span class="item__no">04</span>
+          <h2 class="item__name">Interactive Smart Waste Sorting</h2>
+          <p class="item__desc">
+            Tulis deskripsi singkat poster interaktif ini: pesan yang disampaikan dan cara interaksinya.
+          </p>
+          <ul class="item__tags">
+            <li>Interactive Poster</li>
+            <li>Microcontroller</li>
+          </ul>
+          <a class="item__link" href="project/project_inter.html">View Project</a>
+        </div>
+      </article>
+
+      <!-- ========== UI/UX ========== -->
+      <article class="item" data-category="uiux">
+        <a class="item__media" href="project/project_web.html" aria-label="Lihat proyek UI/UX web">
+          <img src="https://ik.imagekit.io/slq2vcu51/porto/project-uiux-web.jpg?updatedAt=1793434929665" alt="Tampilan proyek UI/UX web" width="626" height="326" loading="lazy">
+        </a>
+        <div class="item__body">
+          <span class="item__no">05</span>
+          <h2 class="item__name">RUNZ - Web UI Design</h2>
+          <p class="item__desc">
+            Tulis deskripsi singkat proyek UI/UX web ini: tujuan, peran Anda, dan alat yang dipakai.
+          </p>
+          <ul class="item__tags">
+            <li>UI/UX</li>
+            <li>Web</li>
+          </ul>
+          <a class="item__link" href="project/project_web.html">View Project</a>
+        </div>
+      </article>
+
+      <article class="item" data-category="web">
+        <a class="item__media" href="project/project_webdev.html" aria-label="Lihat proyek web development">
+          <img src="https://ik.imagekit.io/slq2vcu51/porto/project-web.jpg?updatedAt=1793434924748" alt="Tampilan proyek web development" width="626" height="326" loading="lazy">
+        </a>
+        <div class="item__body">
+          <span class="item__no">06</span>
+          <h2 class="item__name">CodeLab - Web for Learning Python</h2>
+          <p class="item__desc">
+            Tulis deskripsi singkat proyek web development ini: fitur utama dan teknologi yang dipakai.
+          </p>
+          <ul class="item__tags">
+            <li>Web Development</li>
+            <li>UI/UX</li>
+          </ul>
+          <a class="item__link" href="project/project_webdev.html">View Project</a>
+        </div>
+      </article>
+
+      <article class="item" data-category="uiux">
+        <a class="item__media" href="project/project_mobile.html" aria-label="Lihat proyek UI/UX aplikasi mobile">
+          <img src="https://ik.imagekit.io/slq2vcu51/porto/project-uiux-mobile.jpg?updatedAt=1793434929467" alt="Tampilan proyek UI/UX aplikasi mobile" width="626" height="326" loading="lazy">
+        </a>
+        <div class="item__body">
+          <span class="item__no">07</span>
+          <h2 class="item__name">LangKita - Mobile Apps UI Design</h2>
+          <p class="item__desc">
+            Tulis deskripsi singkat proyek UI/UX aplikasi mobile ini: tujuan, peran Anda, dan alat yang dipakai.
+          </p>
+          <ul class="item__tags">
+            <li>UI/UX</li>
+            <li>Mobile App</li>
+          </ul>
+          <a class="item__link" href="project/project_mobile.html">View Project</a>
+        </div>
+      </article>
+
+      <!-- ========== FILM & FOTO (di luar proyek kampus) ========== -->
+      <article class="item" data-category="filmfoto">
+        <a class="item__media" href="project/project_film1.html" aria-label="Lihat produksi film 1">
+          <img src="https://ik.imagekit.io/slq2vcu51/porto/project-film-1.jpg?updatedAt=1793434929531" alt="Cuplikan film pertama" width="626" height="326" loading="lazy">
+        </a>
+        <div class="item__body">
+          <span class="item__no">08</span>
+          <h2 class="item__name">Cuma Satu Menit? | One Minute Film Competition by Sony Indonesia.</h2>
+          <p class="item__desc">
+            Tulis deskripsi singkat film ini: cerita, peran Anda, dan alat yang dipakai.
+          </p>
+          <ul class="item__tags">
+            <li>Film</li>
+            <li>Editor</li>
+          </ul>
+          <a class="item__link" href="project/project_film1.html">View Project</a>
+        </div>
+      </article>
+
+      <article class="item" data-category="filmfoto">
+        <a class="item__media" href="project/project_fotoacara.html" aria-label="Lihat foto acara">
+          <img src="https://ik.imagekit.io/slq2vcu51/porto/project-foto-acara.JPG?updatedAt=1793434936342" alt="Karya fotografi acara" width="626" height="326" loading="lazy">
+        </a>
+        <div class="item__body">
+          <span class="item__no">09</span>
+          <h2 class="item__name">TGTS 2026 - TRM Goes To School 2026 </h2>
+          <p class="item__desc">
+            Tulis deskripsi singkat seri foto acara ini: nama acara, peran Anda, dan hasilnya.
+          </p>
+          <ul class="item__tags">
+            <li>Photography</li>
+            <li>Event</li>
+          </ul>
+          <a class="item__link" href="project/project_fotoacara.html">View Project</a>
+        </div>
+      </article>
+
+      <article class="item" data-category="filmfoto">
+        <a class="item__media" href="project/project_dokumenter.html" aria-label="Lihat lomba dokumenter">
+          <img src="https://ik.imagekit.io/slq2vcu51/porto/project-dokumenter.jpg?updatedAt=1793434927667" alt="Cuplikan film dokumenter lomba" width="626" height="326" loading="lazy">
+        </a>
+        <div class="item__body">
+          <span class="item__no">10</span>
+          <h2 class="item__name">Dokumenter Kedai Kampioen</h2>
+          <p class="item__desc">
+            Tulis deskripsi singkat dokumenter ini: tema, nama lomba, peran Anda, dan hasil yang diraih.
+          </p>
+          <ul class="item__tags">
+            <li>Documentery</li>
+            <li>Competition</li>
+            <li>Editor</li>
+          </ul>
+          <a class="item__link" href="project/project_dokumenter.html">View Project</a>
+        </div>
+      </article>
+
+      <article class="item" data-category="filmfoto">
+        <a class="item__media" href="project/project_film3.html" aria-label="Lihat produksi film 3">
+          <img src="https://ik.imagekit.io/slq2vcu51/porto/project-film-3.jpg?updatedAt=1793434927466" alt="Cuplikan film ketiga" width="626" height="326" loading="lazy">
+        </a>
+        <div class="item__body">
+          <span class="item__no">11</span>
+          <h2 class="item__name">SKKA: Satu Keluarga Kagak Apal (Short Movie)</h2>
+          <p class="item__desc">
+            Tulis deskripsi singkat film ini: cerita, peran Anda, dan alat yang dipakai.
+          </p>
+          <ul class="item__tags">
+            <li>Film</li>
+            <li>Editor</li>
+          </ul>
+          <a class="item__link" href="project/project_film3.html">View Project</a>
+        </div>
+      </article>
+
+    </section>
+
+    <p class="project__empty" id="empty" hidden>Belum ada proyek di kategori ini.</p>
+  </main>
+
+  <script>
+    // Filter proyek berdasarkan kategori
+    const buttons = document.querySelectorAll('.filter__btn');
+    const items = document.querySelectorAll('.item');
+    const empty = document.getElementById('empty');
+
+    // Menyusun ulang nomor dan posisi gambar (kiri/kanan) untuk proyek yang tampil
+    function layout() {
+      let n = 0;
+      items.forEach(item => {
+        item.classList.remove('item--flip');
+        if (item.hidden) return;
+        n++;
+        item.querySelector('.item__no').textContent = String(n).padStart(2, '0');
+        if (n % 2 === 0) item.classList.add('item--flip');
+      });
+      empty.hidden = n !== 0;
+    }
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('is-active'));
+        btn.classList.add('is-active');
+
+        const filter = btn.dataset.filter;
+        items.forEach(item => {
+          item.hidden = !(filter === 'all' || item.dataset.category === filter);
+        });
+        layout();
+      });
+    });
+
+    layout();
+  </script>
+</body>
+</html>

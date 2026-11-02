@@ -1,0 +1,268 @@
+
+:root {
+  --black: #000;
+  --white: #fff;
+  --grey-bg: #e6e6e6;
+  --grey-pill: #e4e4e4;
+  --grey-line: #bdbdbd;
+  --ink: #000;
+  --font: "Roboto", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  color: var(--ink);
+  background: var(--grey-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, p, ul, figure {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+/* =========================================
+   PROJECT
+   ========================================= */
+.project {
+  padding: clamp(96px, 8.7vw, 140px) 4.2vw clamp(56px, 6vw, 96px);
+}
+
+/* ---------- Judul ---------- */
+.project__head {
+  text-align: center;
+}
+
+.project__title {
+  font-size: clamp(56px, 7.5vw, 120px);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.2em;
+  /* kompensasi letter-spacing terakhir supaya benar-benar di tengah */
+  padding-left: 0.2em;
+}
+
+.project__intro {
+  max-width: 56%;
+  margin: clamp(14px, 1.7vw, 26px) auto 0;
+  font-size: clamp(13px, 1.4vw, 22px);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0.1em;
+}
+
+/* ---------- Filter ---------- */
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: clamp(28px, 3.4vw, 54px);
+}
+
+.filter__btn {
+  padding: 10px 20px;
+  font-family: inherit;
+  font-size: clamp(12px, 0.95vw, 14px);
+  font-weight: 400;
+  color: var(--black);
+  background: var(--white);
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.filter__btn:hover {
+  background: #f0f0f0;
+}
+
+.filter__btn.is-active {
+  color: var(--white);
+  background: var(--black);
+}
+
+/* ---------- Daftar proyek ---------- */
+.project__list {
+  margin-top: clamp(36px, 4.5vw, 72px);
+  border-bottom: 1px solid var(--grey-line);
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: 4.7vw;
+  padding: clamp(28px, 3.4vw, 54px) 0;
+  border-top: 1px solid var(--grey-line);
+}
+
+/* atribut hidden (dipakai filter) harus menang atas display: grid */
+.item[hidden] {
+  display: none;
+}
+
+/* proyek tampil ke-2, 4, dst: gambar di kanan (kelas diatur oleh JavaScript) */
+.item--flip {
+  grid-template-columns: 1fr 1.1fr;
+}
+
+.item--flip .item__media {
+  order: 2;
+}
+
+.item__media {
+  display: block;
+  aspect-ratio: 626 / 326;
+  overflow: hidden;
+  border-radius: clamp(14px, 1.4vw, 22px);
+  background: #d9d9d9;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* hitam putih, berwarna saat di-hover */
+  filter: grayscale(1);
+  transition: filter 0.5s ease, transform 0.5s ease;
+}
+
+.item__media:hover,
+.item__media:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+}
+
+.item__media:hover img,
+.item__media:focus-visible img {
+  filter: grayscale(0);
+  transform: scale(1.03);
+}
+
+/* ---------- Teks proyek ---------- */
+.item__no {
+  display: block;
+  font-size: clamp(14px, 1.3vw, 20px);
+  font-weight: 300;
+  letter-spacing: 0.3em;
+  margin-bottom: clamp(8px, 1vw, 16px);
+}
+
+.item__name {
+  font-size: clamp(26px, 3.4vw, 54px);
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: 0.06em;
+}
+
+.item__desc {
+  max-width: 34em;
+  margin-top: clamp(12px, 1.4vw, 22px);
+  font-size: clamp(14px, 1.3vw, 20px);
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.item__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: clamp(14px, 1.6vw, 24px);
+}
+
+.item__tags li {
+  padding: 5px 14px;
+  font-size: clamp(11px, 0.9vw, 14px);
+  font-weight: 400;
+  border: 1px solid var(--black);
+  border-radius: 999px;
+}
+
+.item__link {
+  display: inline-block;
+  margin-top: clamp(18px, 2vw, 32px);
+  padding: 12px 28px;
+  font-size: clamp(12px, 1vw, 15px);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--white);
+  background: var(--black);
+  border-radius: 999px;
+  transition: opacity 0.2s ease;
+}
+
+.item__link:hover {
+  opacity: 0.75;
+}
+
+.project__empty {
+  margin-top: 48px;
+  text-align: center;
+  font-size: clamp(14px, 1.3vw, 20px);
+  font-weight: 300;
+  letter-spacing: 0.05em;
+}
+
+/* =========================================
+   RESPONSIVE (tablet & mobile)
+   ========================================= */
+@media (max-width: 900px) {
+  .project {
+    padding: 100px 24px 48px;
+  }
+
+  .project__intro {
+    max-width: 100%;
+    letter-spacing: 0.05em;
+  }
+
+  /* satu kolom: gambar di atas, teks di bawah */
+  .item,
+  .item--flip {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .item--flip .item__media {
+    order: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    transition: none !important;
+  }
+}

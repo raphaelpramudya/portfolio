@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hey it's Rap</title>
+  <meta name="description" content="Portfolio Raphael Pramudya: Graphic Designer, UI/UX Designer, 2D Animator, Programmer.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/nav.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="nav-wrap">
+    <nav class="nav" aria-label="Navigasi utama">
+      <a href="index.html" class="nav__link is-active" aria-current="page">Home</a>
+      <a href="project.html" class="nav__link">Project</a>
+      <a href="work.html" class="nav__link">Work</a>
+      <a href="resume.html" class="nav__link">Resume</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+      <div class="hero__glass" aria-hidden="true"></div>
+
+      <h1 class="hero__title hero__title--first">Raphael</h1>
+
+      <ul class="hero__roles">
+        <li>Immersive Technology Enthusiast</li>
+        <li>Technical & Program Director</li>
+        <li>UI/UX Designer</li>
+        <li>Creative Producer</li>
+      </ul>
+
+      <p class="hero__credit">Raphael Pramudya Nugroho<br>Portfolio &copy;</p>
+
+      <p class="hero__title hero__title--second" aria-hidden="true">Portfolio</p>
+    </section>
+
+    <!-- ===== ABOUT ME ===== -->
+    <section class="about" id="about">
+      <h2 class="about__title">About Me</h2>
+
+      <div class="about__grid">
+
+        <!-- Pendidikan -->
+        <div class="about__edu">
+          <h3 class="edu__heading">Education</h3>
+
+          <div class="edu__item">
+            <p class="edu__level">Undergraduate</p>
+            <p class="edu__school">EEPIS</p>
+            <p class="edu__year">2024 - Now</p>
+            <p class="edu__major">Multimedia Engineering Technology</p>
+          </div>
+
+          <div class="edu__item">
+            <p class="edu__level">High School</p>
+            <p class="edu__school">St. Louis VHS</p>
+            <p class="edu__year">2021 - 2024</p>
+            <p class="edu__major">Multimedia</p>
+          </div>
+        </div>
+
+        <!-- Foto -->
+        <figure class="about__photo">
+          <img src="https://ik.imagekit.io/slq2vcu51/porto/Foto%20Color.png?updatedAt=1793434926864" alt="Foto Raphael Pramudya Nugroho">
+        </figure>
+
+        <!-- Bio + sosial media -->
+        <div class="about__bio">
+          <p class="bio__text">
+            I am an EEPIS student with a strong passion for audiovisual arts and immersive technology, 
+            specializing in <strong>projection mapping and motion graphics</strong> 
+            with a growing interest in <strong>Extended Reality (XR)</strong>. 
+            I enjoy transforming creative ideas into vivid, interactive, 
+            and captivating visual experiences by combining art, technology, and user interaction. 
+            I am continuously developing my skills to create innovative and impactful 
+            experiences across projection mapping, XR, and interactive media.
+          </p>
+
+          <div class="social">
+            <p class="social__heading">Social Media</p>
+
+            <a class="social__item" href="https://www.linkedin.com/in/raphaelpramudya25/" target="_blank" rel="noopener noreferrer">
+              <span>Raphael Pramudya Nugroho</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/>
+              </svg>
+            </a>
+
+            <a class="social__item" href="https://www.instagram.com/rap_ngrh21" target="_blank" rel="noopener noreferrer">
+              <span>@rap_ngrh21</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor" stroke-width="2"/>
+                <circle cx="12" cy="12" r="4.3" fill="none" stroke="currentColor" stroke-width="2"/>
+                <circle cx="17.6" cy="6.4" r="1.2" fill="currentColor"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Menandai menu aktif saat diklik
+    const links = document.querySelectorAll('.nav__link');
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        links.forEach(l => l.classList.remove('is-active'));
+        link.classList.add('is-active');
+      });
+    });
+  </script>
+</body>
+</html>
